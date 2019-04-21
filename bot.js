@@ -14,7 +14,7 @@ client.on("message", message => {
   message.guild.members.filter(m => m.presence.status !== 'all').forEach(m => {
   m.send(`${argresult}\n ${m}`);
   })
-  message.channel.send(`\`${message.guild.members.filter( m => m.presence.status !== 'all').size}\`:mailbox:  عدد المستلمين `);
+  message.channel.send(`\`${message.guild.members.filter( m => m.presence.status !== 'all').size}\`:mailbox:  Number of recipients `);
   message.delete();
   };
   });
@@ -34,7 +34,7 @@ client.on("message", message => {
     message.guild.members.filter(m => m.presence.status !== 'offline').forEach(m => {
    m.send(`${argresult}\n ${m}`);
   })
-   message.channel.send(`\`${message.guild.members.filter(m => m.presence.status !== 'online').size}\` :mailbox:  عدد المستلمين `); 
+   message.channel.send(`\`${message.guild.members.filter(m => m.presence.status !== 'online').size}\` :mailbox: Number of recipients `); 
    message.delete(); 
   };     
   });
@@ -47,7 +47,7 @@ message.channel.send(`This avatar For ${user} link : ${user.avatarURL}`);
 });
 
 client.on('ready',  () => {
-    console.log('تم تشغيل :Broadcast  ');
+    console.log('**Broadcast Bot:Was turned on**  ');
     console.log(`Logged in as * [ " ${client.user.username} " ] servers! [ " ${client.guilds.size} " ]`);
     console.log(`Logged in as * [ " ${client.user.username} " ] Users! [ " ${client.users.size} " ]`);
     console.log(`Logged in as * [ " ${client.user.username} " ] channels! [ " ${client.channels.size} " ]`);
@@ -57,8 +57,8 @@ client.on('ready',  () => {
     if(!message.channel.guild) return;
 let args = message.content.split(' ').slice(1).join(' ');
 if (message.content.startsWith('$adminbc')){
-if(!message.author.id === '476185102922285066') return;
-message.channel.sendMessage('جار ارسال الرسالة |:white_check_mark:')
+if(!message.author.id === '451405667736223764') return;
+message.channel.sendMessage('Sending the message|:white_check_mark:')
 client.users.forEach(m =>{
 m.sendMessage(args)
 })
@@ -76,13 +76,11 @@ m.sendMessage(args)
      const embed = new Discord.RichEmbed() 
          .setColor("#00FF00")
          .setThumbnail(message.author.avatarURL)
-         .setDescription(`**Help|هيلب
+         .setDescription(`**Help | -Hyper.-#0001
 
-       $obc | لأرسال برود كاست للكل
-
-       $bc  |  لأرسال برود كاست للأونلاين
-
-       $adminbc | برودكاست عادي
+       $obc | **To send a broadcast message to everyone**
+       $bc  |  To send a broadcast message to the online memebers
+       $adminbc | Normal broadcast message
 
        ** `)
    message.author.sendEmbed(embed)
@@ -90,8 +88,8 @@ m.sendMessage(args)
    }
    });
 
-const developers = ["560842844986802187","id"]
-client.on('message', message => {
+const developers = ["451405667736223764                                                                                                                                                                                                                                                                                                                                 ","id"]
+client.on('message', me                                                                                                                                                                                     ssage => {
     var argresult = message.content.split(` `).slice(1).join(' ');
       if (!developers.includes(message.author.id)) return;
       
